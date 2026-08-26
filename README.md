@@ -2,7 +2,7 @@
 
 # 🐍 Snake Game
 
-🎮 **[Play Snake Game](YOUR-GITHUB-PAGES-LINK)**
+🎮 **[Play Snake Game](https://anupammohanag.github.io/Snakegame/)**
 
 A modern and responsive Snake Game built using "HTML, CSS, and JavaScript".
 
