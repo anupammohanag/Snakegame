@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden; /* Prevent scrolling */
+    background-color: #3bb2ed; /* Light blue background like the image */
+    font-family: 'Fredoka One', cursive; /* Chunky, friendly font */
+    touch-action: none; /* Prevent pinch zoom on mobile */
+}
+
+/* Background Pattern (Hexagons/Grid representation) */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: 
+        radial-gradient(rgba(255, 255, 255, 0.2) 2px, transparent 2px),
+        radial-gradient(rgba(255, 255, 255, 0.2) 2px, transparent 2px);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+    z-index: -1;
+}
+
+#gameCanvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+
+#ui-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Let clicks pass through to canvas */
+    display: flex;
+    flex-direction: column;
+}
+
+#score-board {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 0 #288bbd, -2px -2px 0 #288bbd, 2px -2px 0 #288bbd, -2px 2px 0 #288bbd;
+    background: rgba(0,0,0,0.2);
+    padding: 10px 20px;
+    border-radius: 30px;
+    z-index: 10;
+}
+
+#start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    pointer-events: auto; /* Allow clicking start button */
+    transition: opacity 0.3s ease;
+    z-index: 20;
+}
+
+#start-screen h1 {
+    font-size: 3rem;
+    color: #ff9900;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0px #cc7a00;
+}
+
+#start-screen p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 25px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#start-btn {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem;
+    padding: 15px 40px;
+    background-color: #ffaa00;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #cc8800;
+    transition: transform 0.1s;
+}
+
+#start-btn:active {
+    transform: translateY(5px);
+    box-shadow: 0 0px 0 #cc8800;
+}
