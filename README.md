@@ -1,6 +1,10 @@
 # 🐍 Snake Game
 
-A modern and responsive Snake Game built using **HTML, CSS, and JavaScript**.
+# 🐍 Snake Game
+
+🎮 **[Play Snake Game](YOUR-GITHUB-PAGES-LINK)**
+
+A modern and responsive Snake Game built using "HTML, CSS, and JavaScript".
 
 ## 🎮 Features
 
